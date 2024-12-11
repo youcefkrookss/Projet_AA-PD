@@ -1,1 +1,1 @@
-keras model is very big, we couldn't upload it in git
+CNN_Resnet model is very big, we couldn't upload it in git
