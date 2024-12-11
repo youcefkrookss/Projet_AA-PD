@@ -34,7 +34,7 @@ response_time_summary = Summary('response_time_seconds', 'Time spent processing 
 @response_time_summary.time()  # Mesurer le temps de réponse
 def predict_label():
     try:
-        prediction_counter.inc()  # Incrémenter le compteur de prédictions
+        prediction_counter.inc()  # Incrémente le compteur de prédictions
         data = request.get_json()
         image = np.array(data['inputs']).astype('float32') / 255.0
         image = np.squeeze(image)
@@ -44,7 +44,7 @@ def predict_label():
         label = cifar100_labels[class_id]
         return jsonify({'class_id': class_id, 'label': label})
     except Exception as e:
-        error_counter.inc()  # Incrémenter le compteur d'erreurs
+        error_counter.inc()  # Incrémente le compteur d'erreurs
         return jsonify({'error': str(e)}), 400
 
 # Route pour exposer les métriques à Prometheus
