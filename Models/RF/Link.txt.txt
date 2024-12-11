@@ -1,0 +1,3 @@
+lien vers le module car trop lourd a chargé :
+
+https://dagshub.com/youcefkrookss/test.mlflow/#/experiments/2/runs/6014df48e9914d20b21cd2af8b4a24b9/artifacts/model
