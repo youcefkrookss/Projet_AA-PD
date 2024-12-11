@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+        <h1 class="text-2xl font-bold text-center text-gray-800"> Classificateur d'images </h1>
+<!--        <p class="text-center text-gray-500 mt-2">Téléchargez une image pour prédire sa classe.</p>-->
+
+        <div class="mt-6">
+            <label for="imageUpload" class="block text-sm font-medium text-gray-700">Téléchargez une image :</label>
+            <input type="file" id="imageUpload" accept="image/*" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        </div>
+
+        <div class="mt-4">
+            <img id="previewImage" class="hidden w-full rounded-lg shadow-md" alt="Prévisualisation" />
+        </div>
+
+        <button id="predictBtn" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg mt-4 hover:bg-indigo-700 transition">Prédire</button>
+
+        <div id="loading" class="hidden mt-4 text-center text-indigo-600">
+            <svg class="animate-spin h-5 w-5 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 100 8H4z"></path>
+            </svg>
+            Chargement...
+        </div>
+
+        <div id="result" class="mt-4 text-center text-gray-800 font-bold"></div>
+    </div>
+    <script src="../static/js/scripts.js"></script>
+</body>
+</html>
