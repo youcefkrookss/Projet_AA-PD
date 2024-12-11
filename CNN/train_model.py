@@ -21,10 +21,10 @@ mlflow.set_tracking_uri('https://dagshub.com/youcefkrookss/test.mlflow')
 mlflow.set_experiment(experiment_name="CNN_Cifar-100")
 
 
-# Activer l'autologging de MLflow
+# Active l'autologging de MLflow
 mlflow.tensorflow.autolog()
 
-# Charger les données CIFAR-100
+# Charge les données CIFAR-100
 (x_train, y_train), (x_test, y_test) = cifar100.load_data(label_mode='fine')
 x_train = x_train.astype('float32') / 255.0
 x_test = x_test.astype('float32') / 255.0
